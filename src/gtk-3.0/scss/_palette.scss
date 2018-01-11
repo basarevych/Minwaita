@@ -3,6 +3,8 @@ $dark_base_color: #232729;
 $light_bg_color: #f5f5f4;
 $dark_bg_color: #33393b;
 //
+$outer_color: #191919;
+//
 $light_fg_color: #eeeeec;
 $dark_fg_color: #2e3436;
 $light_text_color: white;
@@ -13,8 +15,8 @@ $dark_insensitive_fg_color: mix($dark_fg_color, $dark_bg_color, 50%);
 $light_insensitive_bg_color: mix($light_bg_color, $light_base_color, 60%);
 $dark_insensitive_bg_color: mix($dark_bg_color, $dark_base_color, 60%);
 //
-$adwaita_blue: #4a90d9;
-$dark_adwaita_blue: darken(#4a90d9, 20%);
+$adwaita_blue: #a90000;
+$dark_adwaita_blue: darken(#a90000, 20%);
 $light_selected_borders_color: darken($adwaita_blue, 30%);
 $dark_selected_borders_color: darken($dark_adwaita_blue, 20%);
 //

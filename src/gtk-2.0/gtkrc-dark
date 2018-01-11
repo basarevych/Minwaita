@@ -6,11 +6,11 @@ gtk-color-scheme = "text_color:white\nbase_color:#232729"
 # Foreground/background colors
 gtk-color-scheme = "fg_color:#FFFFFF\nbg_color:#33393B"
 # Selected foreground/background colors
-gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#215d9c"
+gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#a90000"
 # Tooltip colors
 gtk-color-scheme = "tooltip_fg_color:#ffffff\ntooltip_bg_color:#343434"
-gtk-color-scheme = "menu_text_color:white\nmenu_color:#232729"
-gtk-color-scheme = "menu_accent:#215d9c"
+gtk-color-scheme = "menu_text_color:white\nmenu_color:#191919"
+gtk-color-scheme = "menu_accent:#a90000"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1

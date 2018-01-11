@@ -1,16 +1,16 @@
-#! /bin/bash
+#!/usr/local/bin/bash
 COMPILED_FOLDER="Compiled"
 SRC_FOLDER="src"
 
 echo "Copy Light Shell variant."
   sassc -t expanded $SRC_FOLDER/gnome-shell/gnome-shell-light.scss $COMPILED_FOLDER/Minwaita-Light-Shell/gnome-shell/gnome-shell.css
-  rm $COMPILED_FOLDER/Minwaita-Light-Shell/gnome-shell/assets/* -R
-  cp $SRC_FOLDER/gnome-shell/light-assets/* $COMPILED_FOLDER/Minwaita-Light-Shell/gnome-shell/assets -R
+  rm -R $COMPILED_FOLDER/Minwaita-Light-Shell/gnome-shell/assets/*
+  cp -R $SRC_FOLDER/gnome-shell/light-assets/* $COMPILED_FOLDER/Minwaita-Light-Shell/gnome-shell/assets
 for variant in '' '-Vanilla' '-OSX'; do
   echo "Copy Shell for each variant. (Minwaita${variant})"
   sassc -t expanded $SRC_FOLDER/gnome-shell/gnome-shell.scss $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gnome-shell/gnome-shell.css
-  rm $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gnome-shell/assets/* -R
-  cp $SRC_FOLDER/gnome-shell/dark-assets/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gnome-shell/assets -R
+  rm -R $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gnome-shell/assets/*
+  cp -R $SRC_FOLDER/gnome-shell/dark-assets/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gnome-shell/assets
 done
 for variant in '' '-Vanilla' '-OSX'; do
   sassc -t expanded $SRC_FOLDER/gtk-3.0/gtk${variant,,}.scss $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gtk-3.0/gtk.css
