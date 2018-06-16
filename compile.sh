@@ -20,6 +20,8 @@ for variant in '' '-Vanilla' '-OSX'; do
   sassc -t expanded $SRC_FOLDER/gtk-3.0/gtk${lvariant}-dark.scss $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-3.0/gtk-dark.css
   rm $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gtk-2.0/assets/*
   rm $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-2.0/assets/*
+  rm -rf $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/xfwm4
+  rm -rf $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/xfwm4
   cp $SRC_FOLDER/gtk-2.0/assets/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gtk-2.0/assets
   cp $SRC_FOLDER/gtk-2.0/assets/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-2.0/assets
   cp $SRC_FOLDER/gtk-2.0/assets-dark/menubar-item-active.png $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-2.0/assets
@@ -27,6 +29,8 @@ for variant in '' '-Vanilla' '-OSX'; do
   cp $SRC_FOLDER/gtk-2.0/gtkrc-darker $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-2.0/gtkrc
   cp $SRC_FOLDER/gtk-2.0/common-files/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/gtk-2.0/
   cp $SRC_FOLDER/gtk-2.0/common-files/* $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/gtk-2.0/
+  cp -r $SRC_FOLDER/xfwm4 $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}/xfwm4
+  cp -r $SRC_FOLDER/xfwm4 $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}-Darker/xfwm4
 
   for color in '-Dark'; do
     sassc -t expanded $SRC_FOLDER/gtk-3.0/gtk${lvariant}-dark.scss $COMPILED_FOLDER/Minwaita${variant}/Minwaita${variant}${color}/gtk-3.0/gtk.css
