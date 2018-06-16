@@ -19,3 +19,28 @@ include "main.rc"
 include "apps.rc"
 include "hacks.rc"
 include "hacks-dark.rc"
+
+style "my-frame" {
+
+  engine "pixmap" {
+
+    image {
+      function = SHADOW
+      file     = "assets/frame.png"
+      border   = {0, 0, 0, 0}
+      stretch  = TRUE
+    }
+
+    image {
+      function       = SHADOW_GAP
+      file           = "assets/frame.png"
+      border         = {0, 0, 0, 0}
+      stretch        = TRUE
+      gap_start_file = "assets/border.png"
+      gap_end_file   = "assets/border.png"
+    }
+
+  }
+
+}
+widget_class "*Systray*" style "my-frame"

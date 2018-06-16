@@ -1495,8 +1495,8 @@ style "menubar" {
 
   # Needed to fix Firefox's menubar text
   bg[NORMAL]    = @menu_color
-  bg[SELECTED] = @selected_fg_color
-  fg[SELECTED] = shade(0.9, @selected_bg_color)
+  #bg[SELECTED] = @selected_fg_color
+  #fg[SELECTED] = shade(0.9, @selected_bg_color)
   fg[NORMAL]    = @menu_text_color
   text[NORMAL]   = @menu_text_color
 }
@@ -1504,20 +1504,20 @@ style "menubar" {
 style "menubar_item" {
 
   xthickness = 3
-  ythickness = 1
+  ythickness = 3
 
   fg[NORMAL]    = @menu_text_color
   text[NORMAL]   = @menu_text_color
-  fg[PRELIGHT] = shade(0.9, @menu_accent)
+  #fg[PRELIGHT] = shade(0.9, @menu_accent)
 
-  engine "pixmap" {
-    image {
-      function    = BOX
-      state       = PRELIGHT
-      file        = "assets/menubar-item-active.png"
-      border      = {0, 0, 0, 3}
-    }
-  }
+#  engine "pixmap" {
+#    image {
+#      function    = BOX
+#      state       = PRELIGHT
+#      file        = "assets/menubar-item-active.png"
+#      border      = {0, 0, 0, 0}
+#    }
+#  }
 
 }
 
@@ -1535,8 +1535,8 @@ style "menu" {
 
 style "menu_item" {
 
-  xthickness = 3
-  ythickness = 2
+  xthickness = 4
+  ythickness = 4
 
   bg[PRELIGHT]   = @menu_accent
   # Chromium uses this setting
@@ -1774,7 +1774,7 @@ style "separator_menu_item" {
 style "button" {
 
   xthickness = 4
-  ythickness = 1
+  ythickness = 4
 
   # For the sake of sanity style buttons this way
   engine "pixmap" {
